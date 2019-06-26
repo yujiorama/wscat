@@ -212,6 +212,7 @@ if (program.listen) {
 
   wss.on('error', err => {
     wsConsole.print(Console.Types.Error, err.message, Console.Colors.Yellow);
+    console.error(err);
     process.exit(-1);
   });
 } else if (program.connect) {
@@ -315,6 +316,7 @@ if (program.listen) {
 
     ws.on('error', err => {
       wsConsole.print(Console.Types.Error, err.message, Console.Colors.Yellow);
+      console.error(err);
       process.exit(-1);
     });
 
